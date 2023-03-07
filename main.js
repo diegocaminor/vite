@@ -1,6 +1,10 @@
 import "./style.css";
 import javascriptLogo from "./javascript.svg";
 import { setupCounter } from "./counter.js";
+import buttonStyles from "./button.module.css";
+
+console.log("buttonStyles");
+console.log(buttonStyles);
 
 document.querySelector("#app").innerHTML = `
   <div>
@@ -19,5 +23,7 @@ document.querySelector("#app").innerHTML = `
     </p>
   </div>
 `;
+
+document.getElementById("counter").className = buttonStyles.btn;
 
 setupCounter(document.querySelector("#counter"));
