@@ -1,0 +1,6 @@
+@import url("./example.sass");
+@import url("./demo.less");
+
+body {
+  background-color: yellow;
+}
