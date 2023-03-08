@@ -2,6 +2,7 @@ import "./style.css";
 import javascriptLogo from "./javascript.svg";
 import { setupCounter } from "./counter.js";
 import buttonStyles from "./button.module.css";
+import user from "./data.json";
 
 console.log("buttonStyles");
 console.log(buttonStyles);
@@ -21,6 +22,7 @@ document.querySelector("#app").innerHTML = `
     <p class="read-the-docs">
       Click on the Vite logo to learn more
     </p>
+    <pre>${JSON.stringify(user)}</pre>
   </div>
 `;
 
