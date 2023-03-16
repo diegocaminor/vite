@@ -15,9 +15,8 @@ console.log(modules);
 console.log("Module load");
 
 for (const path in modules) {
-  modules[path]().then((module) => {
-    module.load();
-  });
+  constmodule = await modules[path]();
+  module.load();
 }
 
 document.querySelector("#app").innerHTML = `
