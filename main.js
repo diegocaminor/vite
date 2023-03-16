@@ -3,9 +3,22 @@ import javascriptLogo from "./javascript.svg";
 import { setupCounter } from "./counter.js";
 import buttonStyles from "./button.module.css";
 import user from "./data.json";
+import suma from "./suma.ts";
 
 console.log("buttonStyles");
 console.log(buttonStyles);
+
+console.log(`La suma de 2 y 5 es: ${suma(2, 5)}`);
+const modules = import.meta.glob("./modules/*.js");
+
+console.log(modules);
+console.log("Module load");
+
+for (const path in modules) {
+  modules[path]().then((module) => {
+    module.load();
+  });
+}
 
 document.querySelector("#app").innerHTML = `
   <div>
