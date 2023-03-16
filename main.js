@@ -18,6 +18,9 @@ for (const path in modules) {
   modules[path]().then((module) => {
     module.load();
   });
+  // top level await
+  // const module = await modules[path]();
+  // module.load();
 }
 
 document.querySelector("#app").innerHTML = `
