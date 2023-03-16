@@ -1,10 +1,12 @@
 import { defineConfig, loadEnv } from "vite";
 import { resolve } from "path";
+import chalk from "chalk";
 
 export default defineConfig(({ command, mode }) => {
   const port = 3000;
 
-  console.log(command, mode);
+  console.log(chalk.yellow(command, mode));
+
   const env = loadEnv(mode, process.cwd());
 
   console.log(env.VITE_NAME);
